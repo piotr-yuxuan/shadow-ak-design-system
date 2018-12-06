@@ -1,0 +1,50 @@
+#+TITLE:shadow-ak-design-system
+
+Adikteev design system can smothly be used within a ClojureScript
+context, just like any other JavaScript library referenced in
+=package.json=.
+
+*** Libraries
+
+This sample project embeds
+
+- React (through reagent binding),
+- Something like Redux (re-frame),
+- Moment.js (raw JS dependency), and
+- Adikteev design system (another raw JS dependency).
+
+The [[report.html][build report]] shows a detailed breakdown of the included sources
+and how much they each contributed to the overall size.
+
+*** Documentation and tools
+
+ - [[https://github.com/Adikteev/ak-design-system][Adikteev design system]]
+ - [[https://shadow-cljs.github.io][Shadow cljs]]
+ - [[https://github.com/shadow-cljs/shadow-cljs.github.io/blob/c9f74369ec922f585e60f8d4fa7217bf52ad1350/docs/js-deps.adoc#user-content-using-npm-packages][Using NPM packages]] with shadow-cljs
+
+*** Usage
+
+Install dependencies, amongst which shadow-cljs
+
+#+BEGIN_SRC shell
+npm install
+#+END_SRC
+
+Build and live reload
+
+#+BEGIN_SRC shell
+shadow-cljs watch main 
+#+END_SRC
+
+Build optimized JS release code
+
+#+BEGIN_SRC shell
+shadow-cljs release main
+#+END_SRC
+
+Construct release build report to inspect release bundle and find why
+it's so big
+
+#+BEGIN_SRC shell
+npx shadow-cljs run shadow.cljs.build-report main report.html
+#+END_SRC

@@ -1,0 +1,11 @@
+{:source-paths ["src/app"]
+ :dependencies [[re-frame "0.10.6"]
+                [reagent "0.8.2-SNAPSHOT"]]
+ :builds {:main {:target :browser
+                 :modules {:app {:init-fn main.core/init}}
+                 :devtools {:http-root "public"
+                            :http-port 8080
+                            :autoload true
+                            :after-load main.core/init}
+                 :compiler-options {:closure-warnings {:global-this :off}
+                                    :optimizations :advanced}}}}

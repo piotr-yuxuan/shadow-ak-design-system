@@ -1,0 +1,5 @@
+public/js/cljs-runtime
+public/js/manifest.edn
+.shadow-cljs/
+node_modules/
+yarn.lock

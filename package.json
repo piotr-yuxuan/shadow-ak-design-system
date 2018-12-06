@@ -1,0 +1,17 @@
+{
+  "name": "shadow-ak-design-system",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.7.6"
+  },
+  "dependencies": {
+    "akds": "http://git@github.com/Adikteev/ak-design-system.git#93512d42a2be7dcdeac478a163e30a31fa7b3e26",
+    "create-react-class": "^15.6.3",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-select": "^2.1.2",
+    "react-server": "^0.8.1"
+  }
+}
